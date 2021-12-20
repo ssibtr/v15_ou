@@ -71,6 +71,7 @@ class OperatingUnit(models.Model):
         self.clear_caches()
         return res
 
+    @api.multi
     def write(self, vals):
         self.clear_caches()
         return super(OperatingUnit, self).write(vals)
